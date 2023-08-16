@@ -29,6 +29,21 @@
 
             Console.WriteLine("Araba Kiralama Projesine Hoş Geldiniz! \n Size Nasıl Yardımcı Olabilirim?\n");
             ıslemler();
+
+            while (true)
+            {
+                string cevap = Console.ReadLine();
+
+                if (cevap.ToLower() == "Araç Listesi".ToLower() || cevap == "1")
+                {
+                    Console.WriteLine("* Araç Listesi *\n");
+                    foreach (Car item in cars)
+                    {
+                        Console.WriteLine($"Marka: {item.marka} - Model: {item.model} - Motor Gücü: {item.motorGucu}");
+                    }
+                    Console.WriteLine("\n");
+                }
+            }
         }
     }
 }

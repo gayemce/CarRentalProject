@@ -22,7 +22,13 @@
 
         static void Main(string[] args)
         {
-            
+            //Car sınıfından nesnelerin listesini temsil eden cars adında bir liste oluşturulur.
+            List<Car> cars = new();
+            cars.Add(new Car() { marka = "BMW", model = 2023, motorGucu = 5000 });
+            cars.Add(new Car() { marka = "Mercedes", model = 2020, motorGucu = 6000 });
+
+            Console.WriteLine("Araba Kiralama Projesine Hoş Geldiniz! \n Size Nasıl Yardımcı Olabilirim?\n");
+            ıslemler();
         }
     }
 }

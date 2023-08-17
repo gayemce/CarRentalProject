@@ -137,6 +137,11 @@
                     Console.WriteLine("Ziyaretiniz için teşekkürler. Tekrar görüşmek üzere.");
                     break;
                 }
+
+                else
+                {
+                    Console.WriteLine("Lütfen listedeki işlemlerden birini seçin!");
+                }
             }
         }
     }

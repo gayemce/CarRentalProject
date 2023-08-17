@@ -87,6 +87,45 @@
 
                 }
 
+                else if (cevap.ToLower() == "Araç Kirala".ToLower() || cevap == "4")
+                {
+                    Console.WriteLine("* Araç Kirala *\n");
+                    
+                    for (int i = 0; i < cars.Count; i++)
+                    {
+                        Console.WriteLine($"{i + 1}. {cars[i].marka}");
+                    }
+
+                tekrar3:;
+                    Console.WriteLine("Araç Seçimi Yapın:");
+                    string secilenAracString = Console.ReadLine();
+                    int secilenArac = 0;
+                    if(int.TryParse(secilenAracString, out secilenArac) == false)
+                    {
+                        Console.WriteLine("Lütfen sayı değeri giriniz");
+                        goto tekrar3;
+                    }
+
+                    if(secilenArac > cars.Count)
+                    {
+                        Console.WriteLine("Seçtiğiniz araç filodo bulunmuyor");
+                    }
+
+                    Console.WriteLine("Kiralamak istediğniz tarih:");
+                    string kiralamaTarih = Console.ReadLine();
+
+                    Console.WriteLine("Kiralamak istediğiniz saat:");
+                    string kiralamaSaat = Console.ReadLine();
+
+                    Console.WriteLine("Teslim edeceğiniz tarih:");
+                    string teslimTarih = Console.ReadLine();
+
+                    Console.WriteLine($"Seçilen Araç: {cars[secilenArac - 1].marka}" +
+                        $" Kiralama Tarihi: {kiralamaTarih}" +
+                        $" Kiralama Saati: {kiralamaSaat}" +
+                        $" Teslim Tarihi: {teslimTarih}");
+                    Console.WriteLine("Aracı zamanında teslim etmezseniz cezai işlem uygulanacaktır.\n\n Bizi Tercih Ettiğiniz İçin Teşekkürler!\n\n");
+                }    
             }
         }
     }

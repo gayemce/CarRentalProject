@@ -49,6 +49,43 @@
                     Console.WriteLine("* Araç Sayısı *\n");
                     Console.WriteLine($"Toplam Araç Sayısı: {cars.Count()}\n\n");
                 }
+                else if (cevap.ToLower() == "Araç Ekle".ToLower() || cevap == "3")
+                {
+                    Console.WriteLine("* Araç Ekle *\n");
+                    Console.WriteLine("Markayı yazın:");
+                    string marka = Console.ReadLine();
+
+                tekrar1:;
+                    Console.WriteLine("Modeli yazın;");
+                    string modelString = Console.ReadLine();
+                    int model = 0;
+                    if (!int.TryParse(modelString, out model))
+                    {
+                        Console.WriteLine(" *** Model değeri sayı olmalıdır. ***");
+                        goto tekrar1;
+                    }
+
+                tekra2:;
+                    Console.WriteLine("Motor gücünü yazın");
+                    string motorGucuString = Console.ReadLine();
+                    int motorGucu = 0;
+                    if (!int.TryParse(motorGucuString, out motorGucu))
+                    {
+                        Console.WriteLine(" *** Motor gücü değeri sayı olmalıdır. ***");
+                        goto tekra2;
+                    }
+
+                    //instance alındı.
+                    Car car = new();
+                    car.marka = marka;
+                    car.model = model;
+                    car.motorGucu = motorGucu;
+                    //cars listesine eklenir.
+                    cars.Add(car);
+
+                    Console.WriteLine("\n");
+
+                }
 
             }
         }

@@ -131,6 +131,12 @@
                 {
                     ıslemler();
                 } 
+
+                 else if (cevap.ToLower() == "Çıkış".ToLower() || cevap == "6")
+                {
+                    Console.WriteLine("Ziyaretiniz için teşekkürler. Tekrar görüşmek üzere.");
+                    break;
+                }
             }
         }
     }

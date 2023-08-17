@@ -43,6 +43,13 @@
                     }
                     Console.WriteLine("\n");
                 }
+
+                 else if (cevap.ToLower() == "Araç Sayısı".ToLower() || cevap == "2")
+                {
+                    Console.WriteLine("* Araç Sayısı *\n");
+                    Console.WriteLine($"Toplam Araç Sayısı: {cars.Count()}\n\n");
+                }
+
             }
         }
     }

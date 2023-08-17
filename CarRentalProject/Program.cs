@@ -125,7 +125,12 @@
                         $" Kiralama Saati: {kiralamaSaat}" +
                         $" Teslim Tarihi: {teslimTarih}");
                     Console.WriteLine("Aracı zamanında teslim etmezseniz cezai işlem uygulanacaktır.\n\n Bizi Tercih Ettiğiniz İçin Teşekkürler!\n\n");
-                }    
+                }   
+
+                 else if (cevap.ToLower() == "İşlemleri Göster".ToLower() || cevap == "5")
+                {
+                    ıslemler();
+                } 
             }
         }
     }

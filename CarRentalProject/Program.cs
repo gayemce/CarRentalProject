@@ -1,14 +1,14 @@
 ﻿namespace CarRentalProject
 {
+    public class Car
+    {
+        public string marka;
+        public int model;
+        public int motorGucu;
+    }
+
     internal class Program
     {
-        public class Car
-        {
-            public string marka;
-            public int model;
-            public int motorGucu;
-        }
-
          private static void ıslemler()
         {
             Console.WriteLine("*** İşlemler *** ");
